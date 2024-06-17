@@ -123,8 +123,10 @@ h6,
 
 /*** Navbar ***/
 .navbar.sticky-top {
-  top: -100px;
+  top: -100%;
   transition: .5s;
+  
+  
 }
 
 .navbar .navbar-brand {

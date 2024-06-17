@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Breadcrumb from "../components/Breadcrumb"
 import { FaAngleDoubleUp, FaAngleDoubleDown } from 'react-icons/fa';
 import InquiryForm from './inquiryform';
-const Productserviceinfo = () => {
+const Productgalleryinfo = () => {
   const { id } = useParams();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const Productserviceinfo = () => {
     // Replace with your actual fetch logic
     const fetchProduct = async () => {
       try {
-        await fetch(`http://localhost:1337/api/services/${id}?populate=*`, {
+        await fetch(`http://localhost:1337/api/products/${id}?populate=*`, {
           method: "GET"
         })
           .then((rsp) => rsp.json())
@@ -68,8 +68,8 @@ const Productserviceinfo = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb title="Our Service"
-        page="Service" />
+      <Breadcrumb title="Our Product"
+        page="Product" />
       {/* Breadcrumb */}
 
       <div className="container-xxl py-5">
@@ -79,7 +79,7 @@ const Productserviceinfo = () => {
               <div className="row gx-3 h-100">
                 <div className=" align-self-start wow fadeInUp" data-wow-delay="0.1s">
                   <h1 className="display-5 mb-4">Product</h1>
-                  <img className="img-fluid" alt='w' src={`http://localhost:1337${product.productimg.data[0].attributes.url}`} />
+                  <img className="img-fluid" alt='w' src={`http://localhost:1337${product.Image.data[0].attributes.url}`} />
                 </div>
 
               </div>
@@ -92,7 +92,7 @@ const Productserviceinfo = () => {
                 </div>
                 {isOpen && (
                   <div className="mb-4">
-                    {product.Description && product.Description.filter(desc => desc.children[0].text.trim() !== '').map((desc, index) => (
+                    {product.Description && product.productdesc.filter(desc => desc.children[0].text.trim() !== '').map((desc, index) => (
                       <ul className='mb-4 ' style={{ textAlign: "justify" }} key={index}><li className='mb-4  d ' >{desc.children[0].text}</li></ul>
                     ))}
                   </div>
@@ -110,4 +110,4 @@ const Productserviceinfo = () => {
   )
 }
 
-export default Productserviceinfo
+export default Productgalleryinfo

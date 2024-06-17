@@ -1,48 +1,46 @@
 // src/DynamicImage.js
 import React from 'react';
-import PropTypes from 'prop-types';
-import './product.css'
-const DynamicImage = ({ src, alt, width, height, className,title ,layout ,des}) => {
+import { Link } from 'react-router-dom';
+ 
+const DynamicImage = ({ imgSrc, title, description,id}) => {
+      
+  const btnprimary = {
+    backgroundColor: "#0b6ab2",
+    color: 'white'
+
+};
   return (
    
 
-    <div className={`dynamic-image   ${layout} ${className}`}>
-
-    <img  
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-  
-      style={{ width: width, height: height , padding:'1%'}}
-      />
-      <h2>{title}</h2>
-      <h4>{des}</h4>
-      </div>
-       
+    <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+    <div className="service-item">
+    <img className="img-fluid" src={imgSrc} alt={title} />
+    <hr className="w-25" />
+    
+      
+        <div className="service-detail">
+        <div className="service-img"  style={{width:'50%',     }}>
+        <hr className="w-25" />
+    <h3 className="mb-0 pt-3 m-auto"  style={{alignItems:"center"     }}>{title}</h3>
+    <hr className="w-25" />
+      {/* <img className="img-fluid" src={imgSrc} alt={title} /> */}
+  </div>
+            <div className="service-title">
+                <hr className="w-25" />
+                {/* <h3 className="mb-0">{title}</h3> */}
+                <img className="img-fluid" src={imgSrc} alt={title} />
+                <hr className="w-25" />
+            </div>
+            <div className="service-text">
+                <p className="text-white mb-0" style={{ fontSize: '20px' }}>{description}</p>
+            </div>  
+        </div>
+        <Link className="btn btn-light" style={btnprimary} to={`/productgallery/${id}`}>Read More</Link>
+        {/* <a className=" btn btn-light" style={btnprimary}  href={id} >Read More</a> */}
+    </div>
+</div>
   );
 };
-
-DynamicImage.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  width: PropTypes.string,
-  height: PropTypes.string,
-  className: PropTypes.string,
-  title: PropTypes.string,
-  des: PropTypes.string,
-  layout: PropTypes.string,
  
-};
-
-DynamicImage.defaultProps = {
-  width: '100%',
-  height: 'auto',
-  className: '',
-  title:'',
-  des:"",
-  layout: 'row', // default layout
-};
 
 export default DynamicImage;

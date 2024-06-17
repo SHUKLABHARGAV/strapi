@@ -2,6 +2,10 @@ import React from 'react'
 import Card from "./Contactcard"
 
 const Contact = () => {
+    const bgprimary = {
+        color : "#0b6ab2",
+        backgroundColor :"#0b6ab2"
+    };
   return (
     <>
       <div className="container-xxl py-5">
@@ -61,31 +65,37 @@ const Contact = () => {
                         with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're
                         done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
                     <div className="row g-4">
-                        <div className="col-6">
-                            <div className="d-flex">
-                                <div className="flex-shrink-0 btn-square   rounded-circle" style={{ backgroundColor:'#0b6ab2',color:'white'}}>
-                                    <i className="fa fa-phone-alt text-white"></i>
+                    <div className="col-sm-6">
+                            <div className="d-flex align-items-center">
+                                <div className="flex-shrink-0 btn-lg-square rounded-circle  " style={bgprimary}>
+                                <a className="btn px-0"  href="mailto:spin.ind443@gmail.com ">
+ <i className="fa fa-envelope-open text-white"></i> </a>
                                 </div>
-                                <div className="ms-3" >
-                                    <h6>Call Us</h6>
-                                    <input style={{border:"0",backgroundColor:"white"}} type="tel" value="+91 9879533443" disabled/>
+                                <div className="ms-3">
+                                    <p className="mb-2">Email us</p>
+                                    <a className="btn px-0"  href="mailto:spin.ind443@gmail.com">
+                                    <h5 className="mb-0">spin.ind443@gmail.com</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
-                            <div className="d-flex">
-                                <div className="flex-shrink-0 btn-square  rounded-circle" style={{ backgroundColor:'#0b6ab2',color:'white'}}>
-                                    <i className="fa fa-envelope text-white"></i>
+                        <div className="col-sm-6">
+                            <div className="d-flex align-items-center">
+                                <div className="flex-shrink-0 btn-lg-square rounded-circle  " style={bgprimary}>
+                                <a className="btn px-0"   href="tel:+91 9712433443"> <i className="fa fa-phone-alt  text-white"></i></a>   
                                 </div>
-                                <div className="ms-3">
-                                    <h6>Mail Us</h6>
-                                    <input style={{border:"0",backgroundColor:"white"}} type="email" value="spin.ind443@gmail.com" disabled/>
-                                     
+                                <div className="ms-3"> 
+                                    <p className="mb-2">Call us</p>
+                                    <a className="btn px-0"   href="tel:+91 9712433443">
+                                    <h5 className="mb-0">+91  9879533443</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+                
                
                {/* contact card */}
                <Card/>

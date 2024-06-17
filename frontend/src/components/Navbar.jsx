@@ -1,5 +1,5 @@
  import React from 'react'
- 
+ import './index.css'
  
 import {Link} from "react-router-dom"
  
@@ -7,10 +7,11 @@ const Navbar = () => {
   return (
     <>
   
-     
+    
+
  
-    <div className="container-fluid px-0" style={{backgroundColor:' #0b6ab2'}}>
-        <div className="row g-0 d-none d-lg-flex">
+    <div className="container-fluid px-0  " style={{backgroundColor:' #0b6ab2'}}>
+        <div className="row g-0 d-none d-lg-flex ">
             <div className="col-lg-6 ps-5 text-start">
                 <div className="h-100 d-inline-flex align-items-center text-white">
                     <span>Follow Us:</span>
@@ -30,7 +31,7 @@ const Navbar = () => {
     </div>
     
      
-    <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+    <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5"  >
         <Link to="/" className="navbar-brand ps-5 me-0">
  
             <h1 className="text-white m-0">Spin Industries</h1>
@@ -45,13 +46,14 @@ const Navbar = () => {
                 <Link to="/Aboutweb" id='Home' className="nav-item nav-link"  >About</Link>
                 <Link to="/Serviceweb" className="nav-item nav-link">Service</Link>
                 <Link to="/Ourteamweb" className="nav-item nav-link">Our Team</Link>
-                <Link to="/Ourproductweb" className="nav-item nav-link">Our Products</Link>
-                <Link to="/Testimonial" className="nav-item nav-link">TestiNomials</Link>
+                <Link to="/Ourproductweb" className="nav-item nav-link">Product Gallery</Link>
+       
                 <Link to="/Contactweb" className="nav-item nav-link">Contact</Link>
             </div>
             <a href="t77" className="btn  btn-light px-3 d-none d-lg-block" style={{ backgroundColor:'#0b6ab2',color:'white'}}>Get A Quote</a>
         </div>
     </nav>
+  
     <a href="#" className="btn btn-lg   btn-lg-square rounded-circle back-to-top" value="Home"  style={{ backgroundColor:'#0b6ab2',color:'white'}}>
         <i className="bi bi-arrow-up"></i>
         </a>

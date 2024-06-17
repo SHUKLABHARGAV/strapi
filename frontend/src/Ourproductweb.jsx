@@ -8,8 +8,8 @@ const Ourproductweb = () => {
   return (
     <div>
      {/* Breadcrumb */}
-     <Breadcrumb title="Our Products"
-      page="Our Products" />
+     <Breadcrumb title="Product Gallery"
+      page="Product Gallery" />
       {/* Breadcrumb */}
     <OurProducts/>
     <Footer/>

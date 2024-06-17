@@ -12,6 +12,8 @@ import Ourproductweb from "./Ourproductweb.jsx";
 import Testimonial from "./components/Testimonial.jsx";
 import Productserviceinfo from "./components/productserviceinfo.jsx";
 import InquiryForm from "./components/inquiryform.jsx";
+import Reviews from "./reviews.jsx";
+import Productgalleryinfo from "./components/productgallaryinfo.jsx";
 
 function App() {
   const { pathname } = useLocation()
@@ -29,9 +31,10 @@ function App() {
         <Route exact path="/Ourteamweb" element={<Ourteamweb />} />
         <Route exact path="/Contactweb" element={<Contactweb />} />
         <Route exact path="/Ourproductweb" element={<Ourproductweb />} />
-        <Route exact path="/Testimonial" element={<Testimonial />} />
+        <Route exact path="/Reviews" element={<Reviews/>} />
         <Route exact path="/Serviceweb" element={<Serviceinfo />} />
         <Route exact path="/productinfo/:id" element={<Productserviceinfo/>} />
+        <Route exact path="/productgallery/:id" element={<Productgalleryinfo/>} />
         <Route exact path="/inquiryform" element={<InquiryForm/>} />
         <Route exact path="/Login"  element={<Login />} />
 

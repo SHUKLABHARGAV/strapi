@@ -27,14 +27,20 @@ const Contactcard = () => {
                     <div className="row g-3">
                         <div className="col-md-6">
                             <div className="form-floating">
-                                <input type="text" className="form-control" name="to_name" id="user_name" placeholder="Your Name" />
+                                <input type="text" className="form-control" name="to_name" id="user_name" placeholder="Your Name" required />
                                 <label for="name">Your Name</label>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="form-floating">
-                                <input type="email" name="from_name" class="form-control" id="user_email" placeholder="Your Email" />
+                                <input type="email" name="from_name" class="form-control" id="user_email" placeholder="Your Email" required />
                                 <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        <div className="col-12">
+                            <div className="form-floating">
+                                <input type="text" name="companyname" className="form-control" id="subject" placeholder="companyname" required />
+                                <label for="companyname" name="companyname">Company name</label>
                             </div>
                         </div>
                         <div className="col-12">

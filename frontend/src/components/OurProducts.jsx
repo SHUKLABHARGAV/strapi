@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import DynamicImage from './Dynamicproducts';
 import '../components/product.css'
 import InquiryForm from './inquiryform';
+import ServiceItem from './Serviceproduct';
 
 
 const OurProducts = (props) => {
@@ -47,25 +48,19 @@ const OurProducts = (props) => {
   }, []);
   return (
     <div className='App' >
-       
-      <div className="row-container p-10 " style={{ color: 'black' }}>
-        {products.map((product, index) => (
- 
-          <DynamicImage
-            key={product.id}
-            src={product.imageUrl}
-            alt={"P image"}
-            width="300px"
-            height="300px"
-            title={product.title}
-            des = {product.description}
-            layout={index % 2 === 0 ? 'row' : 'column'}
-
-          />
-        
-        ))}
-      
-      </div>
+        <div className="row gy-5 gx-4">
+                    {products.map((service, index) => (
+                <DynamicImage
+                    key={index}
+                    imgSrc={service.imageUrl}
+                    title={service.title}
+                    description={service.description}
+                    id={service.id}
+                    btnStyle={service.btnStyle}
+                />
+            ))}
+            </div>
+    
  
  
 

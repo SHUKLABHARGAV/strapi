@@ -5,8 +5,9 @@ import About  from "./components/About";
 import Counter from "./components/Counter";
 import Service from "./components/Service";
 import OurTeam from "./components/OurTeam";
-import Testimonial from "./components/Testimonial";
+ 
 import Footer from "./components/Footer";
+import Testimonial from './components/Testimonial';
  
 
 const Home = () => {

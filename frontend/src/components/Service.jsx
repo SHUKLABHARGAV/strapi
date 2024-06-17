@@ -13,7 +13,7 @@ const Service = () => {
 
         const fetchProducts = async () => {
             try {
-                await fetch('http://localhost:1337/api/services?populate=*', {
+                await fetch('https://elegant-respect-d8392b3457.strapiapp.com/api/services?populate=*', {
                     method: "GET"
                 }).then((rsp) => rsp.json()).then((resp) => {
                     console.log(resp);
@@ -21,7 +21,7 @@ const Service = () => {
                     const data = Array.isArray(resp?.data) && resp.data.map((item, index) => {
                         const { id, attributes: { productTitle, productimg, productdesc } } = item
                         return { id, description: productdesc, title: productTitle
-                            , imageUrl: `http://localhost:1337${productimg.data[0].attributes.url}` }
+                            , imageUrl: `https://elegant-respect-d8392b3457.media.strapiapp.com/${productimg.data[0].attributes.url}` }
                     })
                     setProducts(data)
                     console.log('====================================');

@@ -18,7 +18,7 @@ const Productgalleryinfo = () => {
     // Replace with your actual fetch logic
     const fetchProduct = async () => {
       try {
-        await fetch(`http://localhost:1337/api/products/${id}?populate=*`, {
+        await fetch(`https://elegant-respect-d8392b3457.strapiapp.com/api/products/${id}?populate=*`, {
           method: "GET"
         })
           .then((rsp) => rsp.json())
@@ -79,7 +79,7 @@ const Productgalleryinfo = () => {
               <div className="row gx-3 h-100">
                 <div className=" align-self-start wow fadeInUp" data-wow-delay="0.1s">
                   <h1 className="display-5 mb-4">Product</h1>
-                  <img className="img-fluid" alt='w' src={`http://localhost:1337${product.Image.data[0].attributes.url}`} />
+                  <img className="img-fluid" alt='w' src={`https://elegant-respect-d8392b3457.media.strapiapp.com/${product.Image.data[0].attributes.url}`} />
                 </div>
 
               </div>
